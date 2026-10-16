@@ -1,48 +1,12 @@
-
-export default function LandingPage() {
+import Footer from '../../layouts/Footer'
+import Navbar from '../../layouts/Navbar'
+import { Link } from 'react-router-dom'
+const LandingPage = () => {
   return (
     <main className="min-h-screen bg-off-white text-charcoal">
       {/* Navigation */}
-      <header className="border-b border-forest/10 bg-off-white">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a
-            href="/"
-            className="text-2xl font-bold tracking-tight text-dark-forest"
-          >
-            kazi<span className="text-terracotta">nest.</span>
-          </a>
-
-          <div className="hidden items-center gap-8 md:flex">
-            <a
-              href="/workspaces"
-              className="text-sm font-medium transition hover:text-terracotta"
-            >
-              Workspaces
-            </a>
-            <a
-              href="/events"
-              className="text-sm font-medium transition hover:text-terracotta"
-            >
-              Community
-            </a>
-            <a
-              href="/member"
-              className="rounded-xl bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-dark-forest"
-            >
-              Member portal
-            </a>
-          </div>
-
-          <a
-            href="/member"
-            className="rounded-lg bg-forest px-4 py-2.5 text-sm font-semibold text-white md:hidden"
-          >
-            Sign in
-          </a>
-        </nav>
-      </header>
-
-      {/* Hero */}
+      <Navbar />
+  
       <section className="mx-auto grid max-w-7xl items-center gap-14 px-6 py-16 md:py-24 lg:grid-cols-2 lg:px-10">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-terracotta/30 bg-terracotta/10 px-4 py-2 text-sm font-semibold text-dark-terracotta">
@@ -192,16 +156,8 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-forest px-6 py-8 text-off-white">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 sm:flex-row sm:items-center">
-          <p className="text-xl font-bold">
-            kazi<span className="text-terracotta">nest.</span>
-          </p>
-          <p className="text-sm text-off-white/65">
-            Make room for your next big idea.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
+export default LandingPage

@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import LandingPage from './pages/public/LandingPage.jsx'
-import DashboardPage from './pages/member/DashboardPage.jsx'
+import DashboardPage from './pages/public/DashboardPage.jsx'
 import WorkspacesPage from './pages/public/WorkspacesPage.jsx'
 
 function ComingSoonPage({ title }) {

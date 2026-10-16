@@ -2,6 +2,8 @@
 import { useMemo, useState } from 'react'
 import { workspaces, workspaceTypes } from '../../features/workspaces/workspaceData.js'
 import WorkspaceCard from '../../components/common/WorkspaceCard.jsx'
+import Navbar from '../../layouts/Navbar.jsx'
+import Footer from '../../layouts/Footer.jsx'
 
 export default function WorkspacesPage() {
   const [activeType, setActiveType] = useState('All spaces')
@@ -27,8 +29,9 @@ export default function WorkspacesPage() {
     <main className="min-h-screen bg-off-white text-charcoal">
       <header className="border-b border-forest/10 bg-off-white">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+          <Navbar />
           <a href="/" className="text-2xl font-bold text-dark-forest">
-            kazi<span className="text-terracotta">nest.</span>
+            Ziada<span className="text-terracotta">works.</span>
           </a>
 
           <div className="flex items-center gap-5">
@@ -215,7 +218,9 @@ export default function WorkspacesPage() {
               >
                 Close details
               </button>
+
             </div>
+            <Footer />
           </section>
         </div>
       )}
