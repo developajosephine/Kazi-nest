@@ -27,46 +27,9 @@ export default function WorkspacesPage() {
 
   return (
     <main className="min-h-screen bg-off-white text-charcoal">
-      <header className="border-b border-forest/10 bg-off-white">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+      <nav>
           <Navbar />
-          <a href="/" className="text-2xl font-bold text-dark-forest">
-            Ziada<span className="text-terracotta">works.</span>
-          </a>
-
-          <div className="flex items-center gap-5">
-            <a
-              href="/"
-              className="text-sm font-medium hover:text-terracotta"
-            >
-              Home
-            </a>
-            <a
-              href="/member"
-              className="rounded-xl bg-forest px-4 py-3 text-sm font-semibold text-white hover:bg-dark-forest"
-            >
-              Member portal
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <section className="bg-dark-forest px-6 py-16 text-off-white sm:py-20">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-terracotta">
-            Find your fit
-          </p>
-
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-6xl">
-            Find a space where great work happens.
-          </h1>
-
-          <p className="mt-5 max-w-2xl text-base leading-7 text-off-white/75 sm:text-lg">
-            Explore flexible workspaces for focused work, team
-            collaboration, and your next big idea.
-          </p>
-        </div>
-      </section>
+      </nav>
 
       <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
@@ -220,10 +183,10 @@ export default function WorkspacesPage() {
               </button>
 
             </div>
-            <Footer />
           </section>
         </div>
       )}
+       <Footer />
     </main>
   )
 }

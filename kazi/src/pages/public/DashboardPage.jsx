@@ -1,7 +1,7 @@
 import Footer from '../../layouts/Footer'
 import Navbar from '../../layouts/Navbar'
 import { Link } from 'react-router-dom'
-const LandingPage = () => {
+const DashboardPage = () => {
   return (
     <main className="min-h-screen bg-off-white text-charcoal">
       {/* Navigation */}
@@ -160,4 +160,4 @@ const LandingPage = () => {
     </main>
   )
 }
-export default LandingPage
+export default DashboardPage

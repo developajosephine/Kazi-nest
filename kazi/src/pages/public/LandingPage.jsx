@@ -8,23 +8,6 @@ export default function LandingPage() {
     <main className="min-h-screen bg-off-white text-charcoal">
       {/* Navigation */}
       <Navbar />
-      
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <Link
-          to="/"
-          className="text-2xl font-bold tracking-tight text-dark-forest"
-        >
-          ziada<span className="text-terracotta">works.</span>
-        </Link>
-
-        <Link
-          to="/member"
-          className="rounded-xl bg-forest px-5 py-3 font-semibold text-white transition hover:bg-dark-forest"
-        >
-          Member portal
-        </Link>
-      </nav>
-
       {/* Hero section */}
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:py-24 lg:px-10">
         <div>
@@ -121,24 +104,8 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-forest px-6 py-8 text-off-white lg:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <Link to="/" className="text-xl font-bold">
-            Ziada<span className="text-terracotta">works.</span>
-          </Link>
-
-          <p className="text-sm text-off-white/70">
-            A place to work, connect, and grow.
-          </p>
-
-          <Link
-            to="/workspaces"
-            className="text-sm font-semibold transition hover:text-terracotta"
-          >
-            Explore workspaces
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
+  
