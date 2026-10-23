@@ -1,8 +1,74 @@
 
+// export default function WorkspaceCard({ workspace, onViewDetails }) {
+//   return (
+//     <article className="group overflow-hidden rounded-2xl border border-forest/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+//       <div className="relative h-56 overflow-hidden bg-off-white">
+//         <img
+//           src={workspace.image}
+//           alt={workspace.name}
+//           loading="lazy"
+//           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+//         />
+
+//         <span className="absolute left-4 top-4 rounded-full bg-off-white px-3 py-1.5 text-xs font-semibold text-dark-forest shadow-sm">
+//           {workspace.type}
+//         </span>
+//       </div>
+
+//       <div className="p-5">
+//         <div className="flex items-start justify-between gap-3">
+//           <h2 className="text-xl font-bold text-dark-forest">
+//             {workspace.name}
+//           </h2>
+
+//           <p className="shrink-0 text-right text-terracotta">
+//             <span className="text-lg font-bold">
+//               KES {workspace.price.toLocaleString('en-KE')}
+//             </span>
+//             <span className="block text-xs text-charcoal/60">
+//               / {workspace.priceUnit}
+//             </span>
+//           </p>
+//         </div>
+
+//         <p className="mt-3 text-sm leading-6 text-charcoal/70">
+//           {workspace.description}
+//         </p>
+
+//         <div className="mt-4 flex flex-wrap gap-2">
+//           {workspace.amenities.map((amenity) => (
+//             <span
+//               key={amenity}
+//               className="rounded-lg bg-off-white px-3 py-1.5 text-xs font-medium text-charcoal/80"
+//             >
+//               {amenity}
+//             </span>
+//           ))}
+//         </div>
+
+//         <div className="mt-5 flex items-center justify-between gap-3 border-t border-forest/10 pt-4">
+//           <span className="text-sm text-charcoal/65">
+//             Up to {workspace.capacity} {workspace.capacity === 1 ? 'person' : 'people'}
+//           </span>
+
+//           <button
+//             type="button"
+//             onClick={() => onViewDetails(workspace)}
+//             className="rounded-xl bg-forest px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-dark-forest"
+//           >
+//             View details
+//           </button>
+//         </div>
+//       </div>
+//     </article>
+//   )
+// }
+
+
 export default function WorkspaceCard({ workspace, onViewDetails }) {
   return (
-    <article className="group overflow-hidden rounded-2xl border border-forest/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="relative h-56 overflow-hidden bg-off-white">
+    <article className="group min-w-0 overflow-hidden rounded-2xl border border-forest/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className="relative h-48 overflow-hidden bg-off-white sm:h-56">
         <img
           src={workspace.image}
           alt={workspace.name}
@@ -10,28 +76,28 @@ export default function WorkspaceCard({ workspace, onViewDetails }) {
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
 
-        <span className="absolute left-4 top-4 rounded-full bg-off-white px-3 py-1.5 text-xs font-semibold text-dark-forest shadow-sm">
+        <span className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] truncate rounded-full bg-off-white px-3 py-1.5 text-xs font-semibold text-dark-forest shadow-sm sm:left-4 sm:top-4">
           {workspace.type}
         </span>
       </div>
 
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-3">
-          <h2 className="text-xl font-bold text-dark-forest">
+      <div className="min-w-0 p-4 sm:p-5">
+        <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+          <h2 className="min-w-0 break-words text-lg font-bold text-dark-forest sm:text-xl">
             {workspace.name}
           </h2>
 
-          <p className="shrink-0 text-right text-terracotta">
+          <p className="shrink-0 text-left text-terracotta sm:text-right">
             <span className="text-lg font-bold">
               KES {workspace.price.toLocaleString('en-KE')}
             </span>
-            <span className="block text-xs text-charcoal/60">
+            <span className="ml-1 text-xs text-charcoal/60 sm:ml-0 sm:block">
               / {workspace.priceUnit}
             </span>
           </p>
         </div>
 
-        <p className="mt-3 text-sm leading-6 text-charcoal/70">
+        <p className="mt-3 break-words text-sm leading-6 text-charcoal/70">
           {workspace.description}
         </p>
 
@@ -39,22 +105,23 @@ export default function WorkspaceCard({ workspace, onViewDetails }) {
           {workspace.amenities.map((amenity) => (
             <span
               key={amenity}
-              className="rounded-lg bg-off-white px-3 py-1.5 text-xs font-medium text-charcoal/80"
+              className="max-w-full break-words rounded-lg bg-off-white px-3 py-1.5 text-xs font-medium text-charcoal/80"
             >
               {amenity}
             </span>
           ))}
         </div>
 
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-forest/10 pt-4">
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-forest/10 pt-4">
           <span className="text-sm text-charcoal/65">
-            Up to {workspace.capacity} {workspace.capacity === 1 ? 'person' : 'people'}
+            Up to {workspace.capacity}{' '}
+            {workspace.capacity === 1 ? 'person' : 'people'}
           </span>
 
           <button
             type="button"
             onClick={() => onViewDetails(workspace)}
-            className="rounded-xl bg-forest px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-dark-forest"
+            className="min-h-11 rounded-xl bg-forest px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-dark-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta"
           >
             View details
           </button>

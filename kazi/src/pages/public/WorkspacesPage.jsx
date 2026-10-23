@@ -31,7 +31,8 @@ export default function WorkspacesPage() {
           <Navbar />
       </nav>
 
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
+      {/* <section className="mx-auto max-w-7xl px-6 py-10 lg:px-10"> */}
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h2 className="text-2xl font-bold text-dark-forest">
@@ -49,7 +50,8 @@ export default function WorkspacesPage() {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search spaces, amenities..."
-              className="w-full rounded-xl border border-forest/20 bg-white px-4 py-3 text-charcoal outline-none transition placeholder:text-charcoal/45 focus:border-forest focus:ring-2 focus:ring-forest/15"
+              // className="w-full rounded-xl border border-forest/20 bg-white px-4 py-3 text-charcoal outline-none transition placeholder:text-charcoal/45 focus:border-forest focus:ring-2 focus:ring-forest/15"
+              className="w-full min-w-0 rounded-xl border border-forest/20 bg-white px-4 py-3 text-base text-charcoal outline-none transition placeholder:text-charcoal/45 focus:border-forest focus:ring-2 focus:ring-forest/15 sm:text-sm"
             />
           </label>
         </div>
